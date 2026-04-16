@@ -1,0 +1,1 @@
+# setup-helm-docs-action
