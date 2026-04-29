@@ -1,6 +1,12 @@
 # gabe565/setup-helm-docs-action
 
-Hardened GitHub Action by [Chainguard](https://www.chainguard.dev).
+Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at [https://github.com/gabe565/setup-helm-docs-action](https://github.com/gabe565/setup-helm-docs-action).
+
+## Versions
+
+| Version | Tag | Upstream commit |
+|---------|-----|-----------------|
+| v1.0.4 | [`v1.0.4`](https://github.com/chainguard-actions/setup-helm-docs-action/tree/v1.0.4) | — |
 
 ## Privacy
 
