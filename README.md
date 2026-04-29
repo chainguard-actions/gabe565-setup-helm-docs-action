@@ -1,5 +1,7 @@
 # gabe565/setup-helm-docs-action
 
+Action that installs Helm Docs, a tool for automatically generating markdown documentation for Helm charts
+
 Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at [https://github.com/gabe565/setup-helm-docs-action](https://github.com/gabe565/setup-helm-docs-action).
 
 ## Versions
