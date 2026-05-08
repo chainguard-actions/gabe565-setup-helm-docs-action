@@ -2,5 +2,6 @@
   "owner": "gabe565",
   "name": "setup-helm-docs-action",
   "visibility": "internal",
-  "description": "Action that installs Helm Docs, a tool for automatically generating markdown documentation for Helm charts"
+  "description": "Action that installs Helm Docs, a tool for automatically generating markdown documentation for Helm charts",
+  "block_publish": false
 }
