@@ -8,7 +8,7 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 | Version | Tag | Upstream commit |
 |---------|-----|-----------------|
-| v1.0.4 | [`v1.0.4`](https://github.com/chainguard-actions/gabe565--setup-helm-docs-action/tree/v1.0.4) | — |
+| v1.0.4 | [`v1.0.4`](https://github.com/chainguard-actions/gabe565-setup-helm-docs-action/tree/v1.0.4) | — |
 
 ## Privacy
 
