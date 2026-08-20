@@ -1,0 +1,41 @@
+name: Test custom repo input
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Install gh CLI if missing
+        run: |
+          if ! command -v gh >/dev/null 2>&1; then
+            curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | \
+              dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+            echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | \
+              tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+            apt-get update -qq
+            apt-get install -y -qq gh
+          fi
+          gh --version
+      - id: action
+        uses: .
+        with:
+          repo: norwoodj/helm-docs
+          version: v1.14.2
+      - name: Assert version output is set
+        env:
+          VERSION: ${{ steps.action.outputs.version }}
+        run: |
+          echo "version: $VERSION"
+          if [ -z "$VERSION" ]; then
+            echo "FAIL: version output is empty"
+            exit 1
+          fi
+          echo "PASS: got version '$VERSION'"
+      - name: Assert helm-docs is on PATH and executable
+        run: |
+          if ! command -v helm-docs >/dev/null 2>&1; then
+            echo "FAIL: helm-docs not found on PATH"
+            exit 1
+          fi
+          echo "PASS: helm-docs found at $(command -v helm-docs)"

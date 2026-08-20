@@ -44,6 +44,7 @@ runs:
         GH_TOKEN: ${{ inputs.token }}
         GH_REPO: ${{ inputs.repo }}
         VERSION: ${{ inputs.version }}
+        RUNNER_OS: ${{ runner.os }}
       run: |
         set -euo pipefail
 
@@ -66,7 +67,7 @@ runs:
             ;;
         esac
 
-        RELEASE="$(gh release view --json=name,assets "$VERSION")"
+        RELEASE="$(gh release view --json=name,assets ${VERSION:+"$VERSION"})"
         VERSION="$(jq -r '.name' <<<"$RELEASE")"
         echo "version=$VERSION" >>$GITHUB_OUTPUT
         echo "Installing helm-docs $VERSION..."
