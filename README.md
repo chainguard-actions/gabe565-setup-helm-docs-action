@@ -6,10 +6,10 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 ## Versions
 
-| Version | Tag | Upstream commit |
-|---------|-----|-----------------|
-| v1 | [`v1`](https://github.com/chainguard-actions/gabe565-setup-helm-docs-action/tree/v1) | [`d5c35bd`](https://github.com/gabe565/setup-helm-docs-action/commit/d5c35bdc9133cfbea3b671acadf50a29029e87c2) |
-| v1.0.4 | [`v1.0.4`](https://github.com/chainguard-actions/gabe565-setup-helm-docs-action/tree/v1.0.4) | [`d5c35bd`](https://github.com/gabe565/setup-helm-docs-action/commit/d5c35bdc9133cfbea3b671acadf50a29029e87c2) |
+| Version | Tag | Upstream commit | Hardening report |
+|---------|-----|-----------------|------------------|
+| v1 | [`v1`](https://github.com/chainguard-actions/gabe565-setup-helm-docs-action/tree/v1) | [`d5c35bd`](https://github.com/gabe565/setup-helm-docs-action/commit/d5c35bdc9133cfbea3b671acadf50a29029e87c2) | — |
+| v1.0.4 | [`v1.0.4`](https://github.com/chainguard-actions/gabe565-setup-helm-docs-action/tree/v1.0.4) | [`d5c35bd`](https://github.com/gabe565/setup-helm-docs-action/commit/d5c35bdc9133cfbea3b671acadf50a29029e87c2) | [`HARDENING.md`](https://github.com/chainguard-actions/gabe565-setup-helm-docs-action/blob/v1.0.4/HARDENING.md) |
 
 ## Privacy
 
